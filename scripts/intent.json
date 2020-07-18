@@ -1,0 +1,110 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone here?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?",
+        "Hey Friend!",
+        "Wassup?",
+        "Finally a beautiful face!"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye", 
+        "See you later", 
+        "Goodbye",
+        "Sayonara"
+      ],
+      "responses": [
+        "See you later, thanks for visiting.",
+        "Have a nice day.",
+        "Bye! Come back again soon.",
+        "Nice talking to you."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks", 
+        "Thank you", 
+        "That's helpful", 
+        "Thank's a lot!",
+        "You saved me bro!",
+        "You saved the day!",
+        "Good work"
+      ],
+      "responses": [
+        "Happy to help!", 
+        "Any time!", 
+        "My pleasure.",
+        "Always got your back buddy."
+      ]
+    },
+    {
+      "tag": "ai",
+      "patterns": [
+        "What is artificial intelligence?",
+        "What is ai?",
+        "Define artificial intelligence.",
+        "Define ai."
+      ],
+      "responses": [
+        "Artificial intelligence is the intelligence demonstrated by machines, unlike the natural intelligence displayed by humans and animals.",
+        "Artificial intelligence is the simulation of human intelligence processes by machines especially computer systems.",
+        "Intelligence in the artificial intelligence is the computational part of the ability to achieve goals in the world. Varying kinds and degress of intelligence occur in people and some machines."
+      ]
+    },
+    {
+      "tag": "ml",
+      "patterns": [
+        "What is machine learning?",
+        "What is ml?",
+        "Define machine learning.",
+        "Define ml."
+      ],
+      "responses": [
+        "Machine learing is the study of computer algorithms that improve automatically through experince. Machine learing is closely related to computational statistics.",
+        "A subset of artificial intelligence, machine learning is the area of computational science that focuses on analyzing and interpreting patterns and structures in data to enable learning and reasoning.",
+        "Machine learning focuses mainly on it's learning from theie past experience and making predictions based on gained experience."
+      ]
+    },
+    {
+      "tag": "webdev",
+      "patterns": [
+        "What is web development?",
+        "Define web development.",
+        "What is web development used for?"
+      ],
+      "responses": [
+        "Web development broadly refers to the tasks associated with developing websites for hosting via intranet or internet. The web development process includes web design, web content development, client-side/server-side scripting and network security configuration, among other tasks.",
+        "Web development refers to building, creating, and an maintaining websites. It includes aspects such as web design, web publishing, web programming, and database management.",
+        "Web development is used to make applications for the web like youtube, facebook, github, etc."
+      ]
+    },
+    {
+      "tag": "nodejs",
+      "patterns": [
+        "What is node js?",
+        "What is node js used for?",
+        "Backend for website?",
+        "What is backend language nodejs?"
+      ],
+      "responses": [
+        "Node. js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.",
+        "Node.js is an open source server environment. Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.). Node.js uses JavaScript on the server"
+      ]
+    }
+  ]
+}

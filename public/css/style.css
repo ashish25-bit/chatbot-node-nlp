@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+body, button, a, input, input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../assets/Desktop\ -\ 4.svg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+.heading {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 30px;
+    letter-spacing: 1.5px;
+}
+.bot_con {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    text-align: right;
+}
+.reveal, .send{
+    background: inherit;
+    border: none;
+}
+.reveal img {
+    width: 70px;
+}
+.message_body {
+    position: relative;
+    background: white;
+    height: 675px;
+    width: 500px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+}
+.messages {
+    height: 579px;
+    width: 100%;
+    border-bottom: 1px #ccc solid;
+    overflow-y: auto;
+    margin: 10px 0;
+}
+.form {
+    padding: 10px;
+    text-align: left;
+}
+.input {
+    width: 82%;
+    margin-right: 5px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px #555 solid;
+}
+.send {
+    position: relative;
+    top: 13px;
+}
+.send img {
+    border: none;
+    width: 35px;
+    background: white;
+}
+.messages::-webkit-scrollbar {
+    width: 5px;
+}
+.messages::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.messages::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+.messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.msg {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.msg-bubble {
+    max-width: 370px;
+    padding: 10px 20px;
+    position: relative;
+    background: #3881E8;
+    border-radius: 10px;
+}
+.msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.msg-info-name, .msg-info-time {
+    margin-right: 10px;
+    font-size: 12px;
+}
+.left-msg .msg-bubble {
+    margin-left: 30px;
+}
+.right-msg {
+    flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+    background: #A3A3A3;
+    margin-right: 30px;
+}
+.msg .msg-bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.left-msg .msg-bubble::before {
+    border-right: 10px solid #3881E8;
+    left: -9px;
+}
+.right-msg .msg-bubble::before {
+    border-left: 10px solid #A3A3A3;
+    right: -9px;
+}
