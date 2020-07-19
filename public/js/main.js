@@ -7,6 +7,22 @@ const config = {
 
 const body = $('.message_body')
 const bot_name = 'TOB'
+const spans = '<span></span><span></span><span></span>'
+
+window.onload = () => {
+    const sentence = "Hello, I am TOB, a chatbot. I was made with love and care and I try to learn from my past experiences." 
+    appendMsg(sentence, 'left-msg', bot_name)
+
+    // appending questions
+    const ques = ["What is node js?", "What is artificial intelligence?", "What is machine learning?"]
+    for (let i=0; i<3; i++) {
+        const div = document.createElement('div')
+        div.classList.add('pre')
+        div.innerText = ques[i]
+        div.addEventListener('click', preDefinedQues)
+        $('.messages').appendChild(div)
+    }
+}
 
 $('.form').addEventListener('submit', async e => {
     const input = $('.input')
@@ -18,8 +34,10 @@ $('.form').addEventListener('submit', async e => {
         return
     } 
     appendMsg(val, 'right-msg', 'You')
+    const loading = loadingElement()
     axios.post('/query', { data: val }, config)
         .then(res => {
+            loading.remove()
             appendMsg(res.data, 'left-msg', bot_name)
         })
         .catch(err => {
@@ -48,4 +66,27 @@ function appendMsg(text, cls, name) {
                     </div>`
     $('.messages').appendChild(div)
     $('.messages').scrollTop = $('.messages').scrollHeight
+}
+
+function preDefinedQues(e) {
+    const text = e.target.innerText
+    appendMsg(text, 'right-msg', 'You')
+    const loading = loadingElement()
+    axios.post('/query', { data: text }, config)
+        .then(res => {
+            loading.remove()
+            appendMsg(res.data, 'left-msg', bot_name)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
+
+function loadingElement() {
+    const loading = document.createElement('div')
+    loading.classList.add('loading')
+    loading.innerHTML = spans
+    $('.messages').appendChild(loading)
+    $('.messages').scrollTop = $('.messages').scrollHeight
+    return loading
 }

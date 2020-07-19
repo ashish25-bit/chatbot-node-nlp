@@ -144,3 +144,37 @@ button {
     border-left: 10px solid #A3A3A3;
     right: -9px;
 }
+.pre, .loading {
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 5px 15px;
+    margin-left: 30px;
+    user-select: none;
+}
+.pre {
+    border: 1px solid #3881E8;
+    max-width: 340px;
+    color: #3881E8;
+    cursor: pointer;
+}
+.loading {
+    background: #3881E8;
+    max-width: 67px;
+}
+.loading span {
+    margin: 0 5px;
+    background: white;
+    width: 12px;
+    border-radius: 50%;
+    height: 12px;
+    display: inline-block;
+    animation: loading 0.5s linear infinite;
+}
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+} 
